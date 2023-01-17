@@ -1,11 +1,17 @@
 ---
-title: About Simples
+title: About me
 description: Simples is a super simple blogging theme for Jekyll.
 subtitle: Simples is a super simple blogging theme for Jekyll.
 featured_image: /images/social.jpg
 ---
 
+asdasd
+
 ![](/images/demo/demo-landscape.jpg)
+
+Asdasdasd
+
+![](../images/demo/demo-landscape-2.jpg)
 
 ## Features
 
@@ -26,8 +32,12 @@ Simples is packed with powerful features to showcase your content:
 * Works with GitHub Pages
 * Updated and supported by the developers
 
+{% comment %} 
+
 ## Get Simples
 
 Simples is created and supported by [Jekyll Themes](https://jekyllthemes.io), and is available for $49.
 
 <a href="https://jekyllthemes.io/theme/simples-blog-jekyll-theme" class="button button--large">Get This Theme</a>
+
+{% endcomment %}
