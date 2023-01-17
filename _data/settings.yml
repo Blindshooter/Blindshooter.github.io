@@ -1,6 +1,6 @@
 basic_settings:
-  site_title: Simples
-  site_tagline: A super simple blogging theme for Jekyll.
+  site_title: Oleksandr Ruppelt
+  site_tagline: Hi! My name is Oleksandr and I write about data science stuff - my projects, my plans, my experience.
   favicon_image: /images/favicon.png
 
 header_settings:
@@ -54,7 +54,7 @@ social_settings:
   soundcloud_url: ''
   spotify_url: ''
   bandcamp_url: ''
-  linkedin_url: ''
+  linkedin_url: 'https://www.linkedin.com/in/oruppelt/'
 
 color_settings:
   background_color: '#ffffff'
