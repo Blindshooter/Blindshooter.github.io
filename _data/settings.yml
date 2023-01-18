@@ -1,6 +1,6 @@
 basic_settings:
   site_title: Oleksandr Ruppelt
-  site_tagline: My name is Oleksandr and I write about data science stuff - my projects, my plans, my experience.
+  site_tagline: I write about data science stuff - my projects, my plans, my experience.
   favicon_image: /images/favicon.png
 
 header_settings:
