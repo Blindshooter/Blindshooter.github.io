@@ -1,0 +1,5 @@
+_site
+.sass_cache
+node_modules
+Gemfile.lock
+*.gem
