@@ -7,7 +7,11 @@ featured_image:
 
 
 
-## More about me
+![](../images/top-02944.jpg)
+
+
+
+## My experience
 
 Currently I am leading Execution Data Science team at DataRobot, where I work (and have some fun) for the last 6 years. The team is focused on delivering end-to-end projects that require both technical aptitude and business acumen to ensure the success of our clients. 
 
