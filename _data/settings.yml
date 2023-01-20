@@ -1,7 +1,7 @@
 basic_settings:
   site_title: Oleksandr Ruppelt
   site_tagline: I write about data science stuff - my projects, my plans, my experience.
-  favicon_image: /images/favicon.png
+  favicon_image: /images/favicon_my.png
 
 header_settings:
   avatar_image: /images/avatar.jpg
