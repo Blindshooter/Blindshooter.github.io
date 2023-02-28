@@ -128,12 +128,12 @@
 	<div class="wrap">
 
 		<h1>Important habits for Data Scientists. Part II. Technical</h1>
-		<p class="subtitle">31 January 2023</p>
+		<p class="subtitle">26 February 2023</p>
 
 		<p><a href="/blog/important-nontech-habits-for-data-scientists">Part I</a></p>
 
 <ul id="markdown-toc">
-  <li><a href="#non-technical-habits" id="markdown-toc-non-technical-habits">Non-Technical habits</a>    <ul>
+  <li><a href="#technical-habits" id="markdown-toc-technical-habits">Technical habits</a>    <ul>
       <li><a href="#1-create-new-environment-for-each-new-project" id="markdown-toc-1-create-new-environment-for-each-new-project">1. Create new environment for each new project</a></li>
       <li><a href="#2-writing-tests-together-with-the-code" id="markdown-toc-2-writing-tests-together-with-the-code">2. Writing tests together with the code</a></li>
       <li><a href="#3-tedious-experiment-tracking" id="markdown-toc-3-tedious-experiment-tracking">3. Tedious Experiment Tracking</a></li>
@@ -142,14 +142,14 @@
   </li>
 </ul>
 
-<p>Now, when we are done with non-technical piece it is time to cover the ones which many consider as more important. I would disagree and for me soft skills and habits are equally important with the hard ones. Also I’ve figured that they become even more important when you aim for more managerial positions. With that sa</p>
+<p>Now, when we are done with the non-technical piece, it is time to cover the ones many consider more important. I would disagree, and for me, soft skills and habits are equally important as hard ones. Also, I’ve figured that they become even more important when you aim for more managerial positions. But if you want to grow as an individual contributor, I’ve found that these habits I listed are of the utmost importance.</p>
 
-<h3 id="non-technical-habits">Non-Technical habits</h3>
+<h3 id="technical-habits">Technical habits</h3>
 
 <h5 id="1-create-new-environment-for-each-new-project">1. Create new environment for each new project</h5>
-<p>I know this, don’t worry. This is a one-time quick project, I’ll look at the data, build some visuals using some library with 13 stars on Github, that require to downgrade <code class="language-plaintext highlighter-rouge">pandas</code> but tomorrow I’ll change everything back. Have been there, have done just that. Most of the times having several  projects in the same environment doesn’t do any bad, sometimes this creates minor inconveniences. But from times to times  this turns into a complete disaster, like your inability to run the code you wrote 6 months ago when you desparately needed it.</p>
+<p>I know this, don’t worry. This is a one-time quick project, I’ll look at the data and build some visuals using some library with 13 stars on Github that require downgrade <code class="language-plaintext highlighter-rouge">pandas</code>, but tomorrow I’ll change everything back. Have been there and have done just that. Most of the time, having several projects in the same environment doesn’t do any worse. Sometimes this creates minor inconveniences. But from time to time, this turns into a complete disaster, like your inability to run the code you wrote six months ago when you desperately needed it.</p>
 
-<p>There is one way out of this - create environment for each small project and then if you are done after 1 day - archive the folder. Despite how tempting it may seem to just quickly install some libraries and run couple of notebooks - just don’t, you’ll thank me later.</p>
+<p>There is one way out of this - create an environment for each small project and then, if you are done after one day - archive the folder. Despite how tempting it may seem to just quickly install some libraries and run a couple of notebooks - just don’t, you’ll thank me later.</p>
 
 <p>Now, personally I am useng venv, it is very simple</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv envname
@@ -157,7 +157,13 @@
 pip3 <span class="nb">install </span>exotic-library
 pip3 <span class="nb">install </span>jupyterlab
 </code></pre></div></div>
-<p>If you are a conda fan, I suggest using miniconda which is more lightweight , otherwise you’ll be running out of space fairly quickly as conda installs a lot of libraries you don’t need.</p>
+<p><code class="language-plaintext highlighter-rouge">venv</code> is my go-to in most situations, and if I feel this is probably only some quick and dirty test, I can archive the whole project folder and leave it to rest. I can always come back to it if needed in the future.</p>
+
+<p>Conda is another excellent way to manage environments. Conda also has the added advantage of being able to install some non-pip packages through<code class="language-plaintext highlighter-rouge">conda-forge</code>. If you are a conda fan, I suggest using miniconda, which is more lightweight. Otherwise, you’ll run out of space fairly quickly because conda installs many libraries you don’t need.</p>
+
+<p>And the last one I do not use but hear hardcore ML engineers use a lot - is Docker. Docker is a platform that allows you to create, deploy, and run applications in containers. Containers are lightweight, portable, and self-contained environments that can run on any machine that has Docker installed. Data scientists can utilize Docker to create a standardized environment for their projects, which can be easily shared with others. Docker containers can also be used to simplify the deployment of machine learning models. To create a Docker container, you need to write a Dockerfile that specifies the environment and dependencies required for the project. Once the Dockerfile is written, you can build the container using <code class="language-plaintext highlighter-rouge">docker build</code>, and then run it using <code class="language-plaintext highlighter-rouge">docker run</code></p>
+
+<p>You may find a lot of resources about this on the internet and why Docker is great, but there is a lot to comprehend and learn for practical usage of the tool, and personally, the additional layer of complexity seems unnecessary if you want to run just a couple of experiments</p>
 
 <hr />
 
@@ -172,21 +178,22 @@ pip3 <span class="nb">install </span>jupyterlab
 <p><strong>External links:</strong>
 <a href="https://blog.inedo.com/python-environment-management-best-practices">https://blog.inedo.com/python-environment-management-best-practices</a>
 <a href="https://realpython.com/python-virtual-environments-a-primer/">https://realpython.com/python-virtual-environments-a-primer/</a>
-<a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
+<a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a>
+<a href="https://medium.com/analytics-vidhya/docker-for-data-science-442299c5203c">https://medium.com/analytics-vidhya/docker-for-data-science-442299c5203c</a></p>
 
 <h5 id="2-writing-tests-together-with-the-code">2. Writing tests together with the code</h5>
-<p>Back when I was an actuary, there was a practice of  doublechecking, that was not a conventional practice. When your boss comes in and says that this report needs to be <em>doublchecked</em>, it means that two people should be doing same task (looking at report or reproducing it) with the aim to arrive at the same results or conclusion. You won’t believe me how many really stupid mistakes  we were able to catch this way before the final numbers have reached our C-level folks.</p>
+<p>Back when I was an actuary, there was a “doublechecking” practice that was not conventional. When your boss comes in and says that this report needs to be <em>doublechecked</em>, it means that two people should be doing the same task (looking at the report or reproducing it) intending to arrive at the same results or conclusion. You won’t believe how many foolish mistakes we were able to catch this way before the final numbers reached our C-level folks.</p>
 
-<p>Now I understand this is a luxurious practice with six-figures-making data scientists, but these guys are still prone to some bad errors. For some reason asking data scientists to write at least some unit tests for the edge cases rubs them the wrong way but still I believe the bare minimum in that regard should be a must have habit.</p>
+<p>Now, I understand this is a luxurious practice with six figures-making data scientists, but these guys are still prone to some nasty errors. For some reason asking data scientists to write at least some unit tests for the edge cases rubs them the wrong way, but still, I believe the bare minimum in that regard should be a must-have habit.</p>
 
-<p>Writing a good code is hard, and personally if I am experimenting only - I don’t write tests. When you are participating in a hackathon or kaggle, you probably don’t need it either. But when you are writing a code that needs to work flawlessly in production, then it is very important to ensure that when it is failing it is failing controllably.</p>
+<p>Writing good code is hard, and personally, if I am experimenting only - I don’t write tests. When you are participating in a hackathon or Kaggle, you probably don’t need it either. But when you are writing code that needs to work flawlessly in production, then it is vital to ensure that when it is failing, it is failing controllably.</p>
 
-<p>My aim is to make sure that the code minimally deviates from expected behavior. That is why there are two types of tests I write:</p>
+<p>I aim to ensure that the code minimally deviates from expected behavior. That is why there are two types of tests I write:</p>
 
 <ol>
   <li>Tests that ensure that code fails in some specific examples (no target column, or it is of incorrect type )</li>
-  <li>Tests that ensure that the code works for some edge cases (dataset has no rows, or only 1 row etc)</li>
-  <li>Tests that ensure that input is a correct one (like if dataframe shape is something specific, or number of columns is what expected)</li>
+  <li>Tests that ensure that the code works for some edge cases (dataset has no rows, or only 1 row, etc.)</li>
+  <li>Tests that ensure that input is correct (like if the dataframe shape is something specific or the number of columns is what is expected)</li>
 </ol>
 
 <hr />
@@ -194,24 +201,24 @@ pip3 <span class="nb">install </span>jupyterlab
 <p><strong>How it helped me?</strong></p>
 <ul>
   <li>Saved me so much time in situations where the code runs and model trains but the underlying data is wrong</li>
-  <li>Debug is a lot easier</li>
+  <li>Debug is a lot easier. In some cases you will know right away where the trouble is and it helps you navigate the code so much easier.</li>
 </ul>
 
 <hr />
 
 <p><strong>External links:</strong>
-https://dssg.github.io/hitchhikers-guide/curriculum/programming_best_practices/test-test-test/ds_testing/
-https://www.youtube.com/watch?v=09etytJHHeY&amp;ab_channel=DataScienceDojo
-https://towardsdatascience.com/unit-testing-for-data-science-with-python-16dfdcfe3232</p>
+<a href="https://dssg.github.io/hitchhikers-guide/curriculum/programming_best_practices/test-test-test/ds_testing/">https://dssg.github.io/hitchhikers-guide/curriculum/programming_best_practices/test-test-test/ds_testing/</a>
+<a href="https://www.youtube.com/watch?v=09etytJHHeY&amp;ab_channel=DataScienceDojo">https://www.youtube.com/watch?v=09etytJHHeY&amp;ab_channel=DataScienceDojo</a>
+<a href="https://towardsdatascience.com/unit-testing-for-data-science-with-python-16dfdcfe3232">https://towardsdatascience.com/unit-testing-for-data-science-with-python-16dfdcfe3232</a></p>
 
 <h5 id="3-tedious-experiment-tracking">3. Tedious Experiment Tracking</h5>
-<p>There are two types of data scientists - the ones who track their experiments learning it the hard way and the ones who haven’t suffered horrible consequences of not doing so JUST YET.  For some reason it is hard to cultivate this habit without being burned omitting it. What were the hyperparameters that gave me the best model? What data I used or features generated? Did I make some change sto the code so now I cannot reproduce my results and I have to present them to the whole company in 30 minutes? Have been there, have done that myself.</p>
+<p>There are two types of data scientists - the ones who track their experiments, learning it the hard way, and those who haven’t suffered horrible consequences of not doing so JUST YET. For some reason, it is hard to cultivate this habit without being burned or omitting it. What were the hyperparameters that gave me the best model? What data I used or features generated? Did I make some changes to the code, so now I cannot reproduce my results, and I have to present them to the whole company in 30 minutes? Have been there and have done that myself.</p>
 
-<p>Your final goal here is reproducability of your best results. There is only one way achieving that - so track’em like your salary depends on it. Most popular is Excel spreadsheet or Google sheets. This is mostly because it doesn’t require anything from you other than just jog down your experiments. But also they allow you</p>
+<p>Your final goal here is the reproducibility of your best results. There is only one way to achieve that - so track’em as your salary depends on it. The most popular is Excel spreadsheet or Google sheets. This is mainly because it requires nothing from you other than just jogging down your experiments. But also they allow you to:</p>
 <ol>
-  <li>Visualise the results with ease. This will be crucial when you have several of those and you need to see how your metric changed with respect of some parameters</li>
-  <li>It allows easier to set up the experiment structure. Especially when you are new. Right after first couple of experiments you will see what is best set up for you - what to test, how to write back the results, etc. 
-I would advise start here, and there is an article with an example <a href="https://wandb.ai/amanarora/melanoma/reports/How-to-track-all-your-experiments-using-Microsoft-Excel---VmlldzoxNTY3MjQ2">here</a> . With that said, don’t overthink, if you are not doing deep learning, this may be enough. If you are DL practitioner, I’ll doubt you survive without this habit at all, so you’ll learn more fancy tools soon enough.</li>
+  <li>Visualise the results with ease. This will be crucial when you have several of those, and you need to see how your metric changed with respect to some parameters</li>
+  <li>Easier to set up the experiment structure. Especially when you are new, right after the first couple of experiments, you will see what is best set up for you - what to test, how to write back the results, etc. 
+I would advise starting here, and there is an article with an example <a href="https://wandb.ai/amanarora/melanoma/reports/How-to-track-all-your-experiments-using-Microsoft-Excel---VmlldzoxNTY3MjQ2">here</a>. With that said, don’t overthink, if you are not doing deep learning, this may be enough. If you are a DL practitioner, I doubt you will survive without this habit at all, so you’ll learn more fancy tools soon enough.</li>
 </ol>
 
 <hr />
@@ -225,18 +232,18 @@ I would advise start here, and there is an article with an example <a href="http
 <hr />
 <p><strong>External links:</strong></p>
 
-<p>https://neptune.ai/blog/ml-experiment-tracking - mostly promotes Neptune.ai plaform but still good
-https://dagshub.com/blog/how-to-compare-ml-experiment-tracking-tools-to-fit-your-data-science-workflow/ - a bit outdated but was good at the time</p>
+<p><a href="https://neptune.ai/blog/ml-experiment-tracking">https://neptune.ai/blog/ml-experiment-tracking</a> - mostly promotes Neptune.ai plaform but still good
+<a href="https://dagshub.com/blog/how-to-compare-ml-experiment-tracking-tools-to-fit-your-data-science-workflow/">https://dagshub.com/blog/how-to-compare-ml-experiment-tracking-tools-to-fit-your-data-science-workflow/</a> - a bit outdated but was good at the time</p>
 
 <h5 id="4-work-on-personal-project-for-a-couple-of-hours-per-week">4. Work on personal project for a couple of hours per week</h5>
 
-<p>Your work will turn into a routine sooner or later. If it haven’t already, I am sure it will. Maybe you are lucky enough and your manager or a company will be very interested in your personal development (which is rare) but it only means the “routinisation” is just going to be slower. Now if you start feeling like doing less and less of new things at work, it could be worthwhile to start a pet project. Or more than one.</p>
+<p>Your work will turn into a routine sooner or later. If it hasn’t already, I am sure it will. Maybe you are lucky enough, and your manager or a company will be very interested in your personal development (which is rare), but it only means the “routinization” will be slower. Now if you start feeling like doing fewer and less of new things at work, it could be worthwhile to start a pet project. Or more than one.</p>
 
-<p>As usual in cases like that - just starting means you are half way through the completion. And you can start in many different places where your hobby lies. You are interested in sports - tons of sport data is available for grab and NFL for example is regularly doing Kaggle competitions. If you are interested in writing - start a technical (or not so technical) blog. If you are interested in computer games - you can do some Reinforcement Learning project to teach an agent to play a game. Now, at this point you should know what works best for you - short projects or really long and ambitious one. Personally, I prefer short ones, because how my mind works - in a month I could easily loose interest to some particular topic and want to try another. As I’ve mentioned in Part I - it is not a bad thing, it is just how people are wired. However I completely understand that doing long term project may be more beneficial as it can showcase more of your ability and you can achieve better results.</p>
+<p>As usual in cases like that - just starting means you are halfway through the completion. And you can start in many different places where your hobby lies. You are interested in sports - tons of sports data is available for grabs, and NFL, for example, is regularly doing Kaggle competitions. If you want to write, start a technical (or not-so-technical) blog. If you are interested in computer games - you can do some Reinforcement Learning projects to teach an agent to play a game. Now, you should know what works best for you - short projects or really long and ambitious ones. I prefer short ones because of how my mind works - in a month, I could quickly lose interest in some particular topic and want to try another. As I’ve mentioned in Part I - it is not a bad thing, it is just how people are wired. However, doing long-term projects may be more beneficial as it can showcase more of your ability, and you can achieve better results.</p>
 
-<p>Also another suggestion - if possible, find a teammate. Working in a team is another valuable skill and learning how to coordinate a team will serve you good in your career. If the project is succesful, you will strengthen your relationship with people you were working with, and maybe will build a fundament for future collaborations.</p>
+<p>Also, another suggestion - if possible, find a teammate. Working in a team is another valuable skill; learning how to coordinate a team will serve you well in your career. If the project is successful, you will strengthen your relationship with the people you were working with, and you may build a fundament for future collaborations.</p>
 
-<p>With habits consistency is a key. You’ll hear this form every corner and every blogpost or video about productivity. Now</p>
+<p>With habits, consistency is key. You’ll hear this from every corner and every blog post or video about productivity. With this one, consistency is of paramount importance. I have a pet project that I try and occasionally do. But because it is technically heavy, I often spend several hours understanding what I did and why. By the time I’m comfortable continuing,  I am already tired. So better way is to make sprints with specific objectives that can be easily picked up sometime after the sprint is finished.</p>
 
 <hr />
 
@@ -249,7 +256,7 @@ https://dagshub.com/blog/how-to-compare-ml-experiment-tracking-tools-to-fit-your
 <hr />
 <p><strong>External links:</strong></p>
 
-<p>No external links, just follow your hobby.</p>
+<p>No external links, just find and follow your hobby.</p>
 
 <p>So that is all. Hope this helps on your way to become a better person and a proffessional</p>
 

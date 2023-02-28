@@ -1,6 +1,6 @@
 ---
 title: 'Important habits for Data Scientists. Part I. Non-technical'
-date: 2023-01-30 00:00:00
+date: 2023-02-15 00:00:00
 featured_image: '/images/nontech_intro.png'
 excerpt: This post will cover most important habits for a succesful data scientist 
 toc: true
