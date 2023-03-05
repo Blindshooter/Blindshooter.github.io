@@ -131,7 +131,7 @@ With habits, consistency is key. You'll hear this from every corner and every bl
 ---
 **External links:**
 
-No external links, just find and follow your hobby. 
+[https://artgor.medium.com/data-science-pet-projects-faq-2bf63f7f4fc9](https://artgor.medium.com/data-science-pet-projects-faq-2bf63f7f4fc9)
 
 
 So that is all. Hope this helps on your way to become a better person and a proffessional
