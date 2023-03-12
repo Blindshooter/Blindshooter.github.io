@@ -1,6 +1,6 @@
 ---
 title: 'Building Data Science Consulting Practice'
-date: 2018-06-30 00:00:00
+date: 2033-01-30 00:00:00
 featured_image: '/images/demo/demo-square.jpg'
 excerpt: This blogpost will summarize my experience in managing  data science team.. Each topic will be covered in more details later on
 ---
